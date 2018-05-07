@@ -21,22 +21,6 @@ public class PlayerMovement : MonoBehaviour
         currentDestination = transform.position;
     }
 
-    // Fixed update is called in sync with physics
-    private void FixedUpdate() {
-
-        if (Input.GetKeyDown(KeyCode.G)) {
-            isInDirectMode = !isInDirectMode;
-            currentDestination = transform.position;
-        }
-
-        if (isInDirectMode) {
-            ProcessDirectMovement();
-        } else {
-            ProcessMouseMovement(); // Mouse movement
-        }
-
-    }
-
     private void ProcessDirectMovement() {
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
@@ -48,28 +32,28 @@ public class PlayerMovement : MonoBehaviour
         thirdPersonCharacter.Move(movement, false, false);
     }
 
-    private void ProcessMouseMovement() {
-        if (Input.GetMouseButton(0)) {
+    //private void ProcessMouseMovement() {
+    //    if (Input.GetMouseButton(0)) {
 
-            clickPoint = cameraRaycaster.hit.point;
+    //        clickPoint = cameraRaycaster.hit.point;
 
-            switch (cameraRaycaster.currentLayerHit) {
-                case Layer.Walkable:
-                    currentDestination = ShortDestination(clickPoint, walkMoveStopRadius);
-                    break;
-                case Layer.Enemy:
-                    currentDestination = ShortDestination(clickPoint, attackMoveStopRadius);
-                    break;
-                default:
-                    print("Should not be here");
-                    return;
+    //        switch (cameraRaycaster.currentLayerHit) {
+    //            case Layer.Walkable:
+    //                currentDestination = ShortDestination(clickPoint, walkMoveStopRadius);
+    //                break;
+    //            case Layer.Enemy:
+    //                currentDestination = ShortDestination(clickPoint, attackMoveStopRadius);
+    //                break;
+    //            default:
+    //                print("Should not be here");
+    //                return;
 
 
-            }
-        }
+    //        }
+    //    }
 
-        WalkToDestination();
-    }
+    //    WalkToDestination();
+    //}
 
     private void WalkToDestination() {
         var playerToClickPoint = currentDestination - transform.position;
