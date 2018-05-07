@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Characters.ThirdPerson;
 
-public class Enemy : MonoBehaviour {
+public class Enemy : MonoBehaviour, IDamageable {
 
     [SerializeField] float maxHealthPoints = 100f;
     [SerializeField] float attackRadius = 4f;
@@ -17,6 +17,10 @@ public class Enemy : MonoBehaviour {
         get {
             return currentHealthPoints / maxHealthPoints;
         }
+    }
+
+    public void TakeDamage(float damage) {
+        currentHealthPoints = Mathf.Clamp(currentHealthPoints - damage, 0f, maxHealthPoints);
     }
 
     void Start() {
