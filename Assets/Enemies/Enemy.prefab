@@ -2780,7 +2780,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoints: 100
-  attackRadius: 8
+  attackRadius: 4
+  chaseRadius: 6
 --- !u!114 &114130035693407494
 MonoBehaviour:
   m_ObjectHideFlags: 1
