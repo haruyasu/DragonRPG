@@ -43,6 +43,11 @@ public class Enemy : MonoBehaviour, IDamageable {
             InvokeRepeating("SpawnProjectile", 0, secondsBetweenShots);
         }
 
+        if (distanceToPlayer > attackRadius) {
+            isAttacking = false;
+            CancelInvoke();
+        }
+
         if (distanceToPlayer <= chaseRadius) {
             aiCharacterControl.SetTarget(player.transform);
         } else {
@@ -53,7 +58,7 @@ public class Enemy : MonoBehaviour, IDamageable {
     void SpawnProjectile() {
         GameObject newProjectile = Instantiate(projectileToUse, projectileSocket.transform.position, Quaternion.identity);
         Projectile projectileComponent = newProjectile.GetComponent<Projectile>();
-        projectileComponent.damageCaused = damagePerShot;
+        projectileComponent.SetDamage(damagePerShot);
 
         Vector3 unitVectorToPlayer = (player.transform.position - projectileSocket.transform.position).normalized;
         float projectileSpeed = projectileComponent.projectileSpeed;
