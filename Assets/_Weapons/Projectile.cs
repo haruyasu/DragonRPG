@@ -29,7 +29,7 @@ namespace RPG.Weapons {
 
             var layerCollidedWith = collision.gameObject.layer;
 
-            if (layerCollidedWith != shooter.layer) {
+            if (shooter && layerCollidedWith != shooter.layer) {
                 DamageIfDamageable(collision);
 
             }
