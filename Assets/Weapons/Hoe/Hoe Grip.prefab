@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4003587956826896}
   m_Layer: 0
-  m_Name: How Grip
+  m_Name: Hoe Grip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
