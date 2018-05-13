@@ -95,7 +95,7 @@ CapsuleCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149790}
-  m_Material: {fileID: 13400000, guid: 52baaeb214519f347a35cf0edfd262ff, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.3
@@ -727,8 +727,6 @@ MonoBehaviour:
   enemyLayer: 9
   maxHealthPoints: 1000
   damagePerHit: 10
-  minTimeBetweenHits: 0.5
-  maxAttackRange: 2
   weaponInUse: {fileID: 11400000, guid: b21e5de7ed205ce4e81ca500ae894278, type: 2}
   animatorOverrideController: {fileID: 22100000, guid: deeeeda17a2851c4ab16c1655696db90,
     type: 2}
@@ -771,7 +769,7 @@ SkinnedMeshRenderer:
   - {fileID: 2100000, guid: bd380be6b5701e84b8eb5d0461891480, type: 2}
   - {fileID: 2100000, guid: 595c4843bc8038e47887924228663335, type: 2}
   - {fileID: 2100000, guid: a2a2d454ec51a9d47a86f44567ab1058, type: 2}
-  - {fileID: 2100000, guid: 11311a523de4d9e49b1de5ba66d6f426, type: 2}
+  - {fileID: 2100000, guid: bd380be6b5701e84b8eb5d0461891480, type: 2}
   - {fileID: 2100000, guid: f66666e47b4326e458fbbf6308366a51, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
