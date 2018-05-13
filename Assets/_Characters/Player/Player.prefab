@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 114678759731372800}
   - component: {fileID: 114298895046361236}
   - component: {fileID: 114595064382931498}
+  - component: {fileID: 114141860063807150}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -701,6 +702,19 @@ Transform:
   m_Father: {fileID: 4478464048283718}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114141860063807150
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cfac28b5160ee04d9f2af4dd07ebdcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energyBar: {fileID: 0}
+  maxEnergyPoints: 100
 --- !u!114 &114298895046361236
 MonoBehaviour:
   m_ObjectHideFlags: 1
