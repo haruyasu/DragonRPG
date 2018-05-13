@@ -22,8 +22,7 @@ GameObject:
   - component: {fileID: 20880070899015814}
   - component: {fileID: 124827349516454162}
   - component: {fileID: 81433761898152068}
-  - component: {fileID: 114731178377469818}
-  - component: {fileID: 114246750477499136}
+  - component: {fileID: 114408985172117974}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -117,22 +116,7 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1089306426622390}
   m_Enabled: 1
---- !u!114 &114246750477499136
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1089306426622390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce02e5e9a7d24234cbd7b42ff4575074, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkCursor: {fileID: 2800000, guid: d1b6fb2c49945614ea20a35ae5a9d6fe, type: 3}
-  unkownCursor: {fileID: 2800000, guid: 85a1dad6880e6c242b6ddf699d11f68e, type: 3}
-  targetCursor: {fileID: 2800000, guid: 43b6336bc83cc9241bc891f28cfff053, type: 3}
-  cursorHotspot: {x: 0, y: 0}
---- !u!114 &114731178377469818
+--- !u!114 &114408985172117974
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -143,7 +127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02853f5d34bd8f429969ac34c466d07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layerPriorities: 090000000a00000008000000
+  walkCursor: {fileID: 0}
+  targetCursor: {fileID: 0}
+  cursorHotspot: {x: 0, y: 0}
 --- !u!114 &114888816574359692
 MonoBehaviour:
   m_ObjectHideFlags: 1
