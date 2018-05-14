@@ -99,8 +99,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.3
-  m_Height: 1.6
+  m_Radius: 0.2
+  m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0.8, z: 0}
 --- !u!1001 &100100000
@@ -715,7 +715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   energyBar: {fileID: 0}
   maxEnergyPoints: 100
-  pointsPerHit: 10
+  regenPointsPerSecond: 1
 --- !u!114 &114298895046361236
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -740,10 +740,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoints: 1000
-  damagePerHit: 10
+  baseDamage: 10
   weaponInUse: {fileID: 11400000, guid: b21e5de7ed205ce4e81ca500ae894278, type: 2}
   animatorOverrideController: {fileID: 22100000, guid: deeeeda17a2851c4ab16c1655696db90,
     type: 2}
+  abilities:
+  - {fileID: 11400000, guid: f7f93531c7885df44aad8895ddcdbe8b, type: 2}
+  - {fileID: 11400000, guid: f7db7bc7c2d851b4482b5f8e56bfaf8c, type: 2}
 --- !u!114 &114678759731372800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -842,7 +845,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 149790}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.1
   m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50

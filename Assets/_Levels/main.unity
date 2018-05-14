@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 440540319}
-  m_IndirectSpecularColor: {r: 0.08857591, g: 0.2828794, b: 0.48428988, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1162,11 +1162,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 2013637686}
     m_Modifications:
-    - target: {fileID: 114595064382931498, guid: 7737647c22c1fc64a88d5cd030c352ce,
-        type: 2}
-      propertyPath: abilities.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
       propertyPath: m_LocalPosition.x
       value: -3.44
@@ -1204,24 +1199,6 @@ Prefab:
       propertyPath: energyBar
       value: 
       objectReference: {fileID: 553354001}
-    - target: {fileID: 114595064382931498, guid: 7737647c22c1fc64a88d5cd030c352ce,
-        type: 2}
-      propertyPath: ability1
-      value: 
-      objectReference: {fileID: 11400000, guid: f7db7bc7c2d851b4482b5f8e56bfaf8c,
-        type: 2}
-    - target: {fileID: 114595064382931498, guid: 7737647c22c1fc64a88d5cd030c352ce,
-        type: 2}
-      propertyPath: abilities.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: f7f93531c7885df44aad8895ddcdbe8b,
-        type: 2}
-    - target: {fileID: 114595064382931498, guid: 7737647c22c1fc64a88d5cd030c352ce,
-        type: 2}
-      propertyPath: abilities.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: f7db7bc7c2d851b4482b5f8e56bfaf8c,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
   m_IsPrefabParent: 0
