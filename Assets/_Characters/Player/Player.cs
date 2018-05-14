@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.SceneManagement;
+
 using RPG.CameraUI;
 using RPG.Core;
 using RPG.Weapons;
@@ -37,8 +39,26 @@ namespace RPG.Characters {
         }
 
         public void TakeDamage(float damage) {
-            currentHealthPoints = Mathf.Clamp(currentHealthPoints - damage, 0f, maxHealthPoints);
 
+            ReduceHealth(damage);
+
+            bool playerDies = (currentHealthPoints - damage <= 0);
+            if (playerDies) {
+                StartCoroutine(KillPlayer());
+            }
+        }
+
+        IEnumerator KillPlayer() {
+            Debug.Log("Death sound");
+            Debug.Log("Death animation");
+
+            yield return new WaitForSecondsRealtime(2f);
+            SceneManager.LoadScene(0);
+        }
+
+        private void ReduceHealth(float damage) {
+            currentHealthPoints = Mathf.Clamp(currentHealthPoints - damage, 0f, maxHealthPoints);
+            // play sound
         }
 
         private void SetCurrentMaxHealth() {
